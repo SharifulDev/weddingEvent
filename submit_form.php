@@ -1,9 +1,9 @@
 <?php
 // Connect to the database
-$servername = "sql8.freemysqlhosting.net";
-$username = "sql8615393";
-$password = "xMkfiRMxxC";
-$dbname = "sql8615393";
+$servername = "sql209.epizy.com";
+$username = "epiz_34120693";
+$password = "zlPjaBZHFIW";
+$dbname = "epiz_34120693_XXX";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
