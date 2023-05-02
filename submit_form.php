@@ -3,7 +3,7 @@
 $servername = "sql209.epizy.com";
 $username = "epiz_34120693";
 $password = "zlPjaBZHFIW";
-$dbname = "epiz_34120693_XXX";
+$dbname = "epiz_34120693_weddingPlanner";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
