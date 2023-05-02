@@ -200,12 +200,12 @@
         </div>
       </section>
 
-      <form onsubmit="return validateForm()">
+      <form id="contact-form" action="process-form.php" method="POST" onsubmit="return validateForm()">
         <div>
           <input placeholder="Your Name" type="text" id="yourname" name="name" required />
-
+      
           <input placeholder="Your Email" type="email" id="email" name="email" required />
-
+      
           <input type="tel" placeholder="Your Phone" id="phone" name="phone" required />
         </div>
         <div>
@@ -278,7 +278,29 @@
     
 }
 
-
+  // Attach event listener to the form's submit event
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    
+    // Get the form data
+    var formData = new FormData(event.target);
+    
+    // Make an AJAX request to the PHP script
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", event.target.action);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // If the request was successful, show a success message
+        alert("Message sent successfully!");
+      } else {
+        // If the request failed, show an error message
+        alert("Error sending message!");
+      }
+    };
+    xhr.send(formData);
+  });
 </script>
+
 
 </html>
